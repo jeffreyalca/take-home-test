@@ -50,7 +50,7 @@ export class ChipsComponent implements OnInit {
     }
   }
 
-  private sortChips(activeSort: string): void {
+  public sortChips(activeSort: string): void {
     
     if (activeSort === Sort.ASC) {
       this.sortByASC(); // Sort by ascending order
