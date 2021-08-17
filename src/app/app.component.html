@@ -16,7 +16,9 @@
         ADD
       </button>
 
-      <select (change)="onSortChange($event)" class="form-control sort">
+      <select
+        (change)="onSortChange($event)" 
+        class="form-control sort">
         <option value="" hidden>Sort</option>
         <option value="descending">Descending</option>
         <option value="ascending">Ascending</option>
@@ -24,7 +26,7 @@
     </form>
 
     <div class="chips-container">
-      <app-chips [chips]="chips"></app-chips>
+      <app-chips [activeSort]="activeSort" [chips]="chips"></app-chips>
     </div>
   </div>
 </div>

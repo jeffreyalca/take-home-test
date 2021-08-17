@@ -3,7 +3,7 @@
   #chipList 
   aria-label="Chips list">
   <mat-chip
-    *ngFor="let chip of chips"
+    *ngFor="let chip of _chips"
     [selectable]="chipsConfig.selectable"
     [removable]="chipsConfig.removable"
     (removed)="remove(chip)"

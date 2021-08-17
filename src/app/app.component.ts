@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Sort } from './shared/enums/sort.enum';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
   
@@ -16,15 +15,13 @@ export class AppComponent implements OnInit {
   public nameModel: string;
 
   ngOnInit(): void {
-    this.activeSort = Sort.ASC;
+    this.activeSort = '';
   }
 
   public addName(): void {
     // don't add a name in the chips if it already exists
     if (!this.chips.includes(this.nameModel)) {
 
-      // Reassignment instead of using push method to 
-      // respect OnPush change detection strategy of child component
       this.chips = [...this.chips, this.nameModel];
       this.nameModel = '';
     }
