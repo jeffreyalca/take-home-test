@@ -1,0 +1,19 @@
+<mat-chip-list 
+  class="mat-chip-list-stacked" 
+  #chipList 
+  aria-label="Chips list">
+  <mat-chip
+    *ngFor="let chip of _chips"
+    [selectable]="chipsConfig.selectable"
+    [removable]="chipsConfig.removable"
+    (removed)="remove(chip)"
+  >
+    {{ chip }}
+    <span 
+      matChipRemove 
+      *ngIf="chipsConfig.removable" 
+      class="material-icons remove">
+      cancel
+    </span>
+  </mat-chip>
+</mat-chip-list>

@@ -1,0 +1,44 @@
+@import "../assets/scss/color-scheme.scss";
+
+.container {
+  margin-top: 2rem;
+
+  .main-container {
+    width: 70%;
+    margin: auto;
+
+    form.form-inline {
+      input {
+        width: 300px;
+      }
+
+      .form-control {
+        border-radius: 0;
+        background-color: #EEEEEE;
+      }
+
+      label {
+        margin-right: 20px;
+      }
+
+      button {
+        background-color: $button-light-green;
+        border: $button-light-green;
+        border-radius: 0;
+        width: 150px;
+        margin-right: 40px;
+      }
+
+      select.sort {
+        position: relative;
+        top: -4px;
+      }
+
+    }
+
+    .chips-container {
+      padding-left: 15px;
+      margin-top: 20px;
+    }
+  }
+}

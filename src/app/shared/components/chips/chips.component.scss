@@ -1,0 +1,14 @@
+span.remove {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+::ng-deep .mat-chip {
+  width: 200px!important;
+  
+  .mat-chip-remove {
+    position: absolute;
+    right: 10px;
+  }
+}
+
