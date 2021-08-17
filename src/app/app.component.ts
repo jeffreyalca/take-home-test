@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Sort } from './shared/enums/sort.enum';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  
+  public title = 'take-home-test';
 
   public activeSort: string;
   public chips: string[] = [];
   public nameModel: string;
 
   ngOnInit(): void {
-
+    this.activeSort = Sort.ASC;
   }
 
   public addName(): void {
@@ -27,6 +31,6 @@ export class AppComponent implements OnInit {
   }
 
   public onSortChange(event): void {
-    console.log(event.target.value);
+    this.activeSort = event.target.value as string;
   }
 }
